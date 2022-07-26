@@ -24,7 +24,6 @@ const Navbar = () => {
     </>
   );
   return (
-    <div>
       <div className="navbar bg-accent">
         <div className="navbar-start">
           <div className="dropdown">
@@ -59,7 +58,6 @@ const Navbar = () => {
           <ul className="menu menu-horizontal p-0">{menuItem}</ul>
         </div>
       </div>
-    </div>
   );
 };
 

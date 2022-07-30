@@ -1,8 +1,15 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const BookingDetails = () => {
+    const {id} = useParams();
     return (
-        <div className='max-w-xs flex flex-col justify-center gap-y-6'>
+        <div
+        data-aos="flip-left"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+     data-aos-offset="500"
+         className='max-w-xs flex flex-col justify-center gap-y-6'>
             <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
             <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
             <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />

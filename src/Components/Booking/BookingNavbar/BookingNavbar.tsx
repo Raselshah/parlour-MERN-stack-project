@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import BookingDetails from "../BookingDetails/BookingDetails";
 
 const BookingNavbar = () => {
   return (

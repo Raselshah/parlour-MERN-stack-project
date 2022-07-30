@@ -4,10 +4,15 @@ import treatment from "../../../image/Image/treatment.png";
 const Treatment = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center min-h-screen gap-24">
-      <div className="div">
+      <div data-aos="fade-up" data-aos-duration="3000" className="div">
         <img className="img-fluid" src={treatment} alt="" />
       </div>
-      <div className="div">
+      <div
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        className="div"
+      >
         <h2 className="text-5xl font-bold text-left">
           Let us handle your <br /> screen{" "}
           <span className="text-primary">Professionally</span>.

@@ -22,6 +22,10 @@ const Navbar = () => {
         <Link to="/contact">Contact</Link>{" "}
       </li>
       <li>
+        {" "}
+        <Link to="/admin">Admin</Link>{" "}
+      </li>
+      <li>
         <Link to='/login'>Login</Link>
       </li>
     </>

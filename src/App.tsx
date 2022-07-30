@@ -1,6 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import AdminNavbar from "./Components/Admin/AdminNavbar/AdminNavbar";
+import MakeAdmin from "./Components/Admin/MakeAdmin/MakeAdmin";
+import OrderList from "./Components/Admin/OrderList/OrderList";
+import ServiceList from "./Components/Admin/ServiceList/ServiceList";
 import BookingDetails from "./Components/Booking/BookingDetails/BookingDetails";
 import BookingList from "./Components/Booking/BookingList/BookingList";
 import BookingNavbar from "./Components/Booking/BookingNavbar/BookingNavbar";
@@ -20,9 +24,14 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/signUp" element={<SignUp/>} />
           <Route path="/booking" element={<BookingNavbar/>} >
-            <Route path="book" element={<BookingDetails />} />
+            <Route path="book/:id" element={<BookingDetails />} />
             <Route path="bookingList" element={<BookingList />} />
             <Route path="review" element={<Review />} />
+          </Route>
+          <Route path="/admin" element={<AdminNavbar/>}>
+              <Route path="order" element={<OrderList/>} />
+              <Route path="addService" element={<ServiceList/>} />
+              <Route path="makeAdmin" element={<MakeAdmin/>} />
           </Route>
         </Routes>
       </div>

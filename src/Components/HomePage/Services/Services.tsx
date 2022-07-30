@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import face from "../../../image/Icon/Group 1372.png";
+import { useNavigate } from "react-router-dom";
 import Products from "../../../types/model";
 const axios = require("axios").default;
 
 const Services = () => {
   const [products, setProducts] = useState<Products[]>([]);
   const [loading, setLoading] = useState<Boolean>(false);
+  const navigate = useNavigate()
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -19,6 +20,9 @@ const Services = () => {
   if (loading) {
     return <p>loading....</p>;
   }
+  const handleBooking = (id:number):void => {
+    navigate(`/booking/book/${id}`)
+  }
   return (
     <div className="bg-base-100 mx-auto pb-6">
       <h2 className="text-center text-4xl font-bold pt-12">
@@ -28,8 +32,15 @@ const Services = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto p-12 mt-6">
         {products.slice(0,6).map((product) => (
           <>
-            <div className="card bg-base-100 shadow-xl">
-              <div className="card-body text-center">
+            <div
+             data-aos="fade-up"
+             data-aos-anchor-placement="center-center"
+             data-aos-duration="2000"
+             className="card bg-base-100 shadow-lg hover:drop-shadow-2xl hover:shadow-red-500/60 cursor-pointer"
+             >
+              <div
+              onClick={() => handleBooking(product.userId)}
+               className="card-body text-center">
                 <img className="w-16 mx-auto" src={product.photo} alt="" />
                 <h2 className="">{product.name}</h2>
                 <p className="text-red-500">{product.price}</p>

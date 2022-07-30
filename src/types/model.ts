@@ -3,4 +3,5 @@ export default interface Products{
     description: string,
     price:number,
     photo:any,
+    userId:number
 }

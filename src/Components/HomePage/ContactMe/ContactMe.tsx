@@ -2,7 +2,11 @@ import React from 'react';
 
 const ContactMe = () => {
     return (
-        <div className='w-2/4 mx-auto mt-12'>
+        <div
+        data-aos="flip-down"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+         className='w-2/4 mx-auto mt-12'>
             <h2 className='text-4xl font-bold text-center mt-12'>Let us handle your <br/> project, professionally.</h2>
             
                <div className="flex flex-row gap-16 mt-12">

@@ -1,20 +1,39 @@
-import React from 'react';
+import React from "react";
+import treatment from "../../../image/Image/treatment.png";
 
 const Treatment = () => {
-    return (
-        <div>
-            <div class="hero min-h-screen bg-base-200">
-  <div class="hero-content flex-col lg:flex-row">
-    <img src="https://placeimg.com/260/400/arch" class="max-w-sm rounded-lg shadow-2xl" />
-    <div>
-      <h1 class="text-5xl font-bold">Box Office News!</h1>
-      <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button class="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</div>
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center min-h-screen gap-24">
+      <div className="div">
+        <img className="img-fluid" src={treatment} alt="" />
+      </div>
+      <div className="div">
+        <h2 className="text-5xl font-bold text-left">
+          Let us handle your <br /> screen{" "}
+          <span className="text-primary">Professionally</span>.
+        </h2>
+        <p className="text-sm text-gray-300 my-6">
+          With well written codes, we build amazing apps for all platforms,
+          mobile and web apps in general ipsum.Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Purus commodo ipsum.
+        </p>
+        <div className="flex flex-row justify-start gap-x-16 mt-12">
+          <div className="stats bg-accent">
+            <div className="stat">
+              <div className="stat-value text-primary">500+</div>
+              <div className="stat-desc">Happy Customer</div>
+            </div>
+          </div>
+          <div className="stats bg-accent">
+            <div className="stat">
+              <div className="stat-value text-primary">16+</div>
+              <div className="stat-desc">Total Service</div>
+            </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Treatment;

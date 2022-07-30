@@ -3,8 +3,8 @@ import bannerPhoto from "../../../image/Image/banner-photo.png";
 
 const Banner = () => {
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-12">
-      <div className="mx-auto z-[-0] p-4">
+    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-12 pb-6">
+      <div className="mx-auto">
         <h1 className="text-5xl font-bold">BEAUTY SALON</h1>
         <h1 className="text-5xl font-bold">FOR EVERY WOMEN</h1>
         <p className="py-6">
@@ -15,7 +15,7 @@ const Banner = () => {
       </div>
 
       <div className="">
-        <img src={bannerPhoto} className="max-w-sm mx-auto rounded-lg shadow-2xl z-40" alt="" />
+        <img src={bannerPhoto} className="img-fluid mx-auto rounded-lg shadow-2xl" alt="" />
       </div>
     </div>
   );

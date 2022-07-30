@@ -3,7 +3,7 @@ import face from '../../../image/Icon/Group 1372.png'
 
 const Services = () => {
   return (
-    <div className="bg-base-100 mx-auto">
+    <div className="bg-base-100 mx-auto pb-6">
       <h2 className="text-center text-4xl font-bold pt-12">
         Our Awesome <span className="text-primary">Services</span>{" "}
       </h2>

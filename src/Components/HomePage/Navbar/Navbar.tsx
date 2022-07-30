@@ -11,15 +11,18 @@ const Navbar = () => {
       </li>
       <li>
         {" "}
-        <Link to="/portfolio">Our Portfolio</Link>{" "}
+        <Link to="/portfolio">About us</Link>{" "}
       </li>
       <li>
         {" "}
-        <Link to="/team">Our Team</Link>{" "}
+        <Link to="/team">Projects</Link>{" "}
       </li>
       <li>
         {" "}
-        <Link to="/contact">Contact Us</Link>{" "}
+        <Link to="/contact">Contact</Link>{" "}
+      </li>
+      <li>
+        <Link to='/login'>Login</Link>
       </li>
     </>
   );

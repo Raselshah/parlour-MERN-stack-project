@@ -1,18 +1,21 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Banner from "./Components/HomePage/Banner/Banner";
+import HomePage from "./Components/HomePage/HomePage";
 import Navbar from "./Components/HomePage/Navbar/Navbar";
-import Services from "./Components/HomePage/Services/Services";
-import Treatment from "./Components/HomePage/Treatment/Treatment";
+import Login from "./Components/Login/Login";
+import SignUp from "./Components/SignUp/SignUp";
 
 function App() {
   return (
     <div className="bg-accent">
-      <div className="max-w-screen-2xl mx-auto ">
+      <div className="max-w-screen-2xl mx-auto px-12">
         <Navbar />
-        <Banner />
-        <Services />
-        <Treatment/>
+        <Routes>
+          <Route path='/' element={<HomePage/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signUp" element={<SignUp/>} />
+        </Routes>
       </div>
     </div>
   );

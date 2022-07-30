@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Link } from "react-router-dom";
+import SocialLogin from "../Hooks/SocialLogin/SocialLogin";
 
 interface IFormInput {
   firstName: string;
@@ -14,7 +15,7 @@ const SignUp = () => {
   const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
 
   return (
-    <div className="max-w-xs mx-auto mt-12">
+    <div className="max-w-xs mx-auto mt-8">
         <h2 className="text-2xl font-bold mb-4">Create an account</h2>
       <form className="flex flex-col gap-y-6" onSubmit={handleSubmit(onSubmit)}>
         <input className="input input-bordered w-full max-w-xs" placeholder="First Name" {...register("firstName", { required: true})} />
@@ -24,6 +25,8 @@ const SignUp = () => {
         <input className="btn btn-primary" value="create an account" type="submit" />
       </form>
       <p className="text-lg mt-2">Already have an account? <Link className="text-primary" to='/login'>login</Link> </p>
+
+      <SocialLogin/>
     </div>
   );
 };

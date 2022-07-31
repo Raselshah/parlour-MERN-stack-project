@@ -31,7 +31,7 @@ const Navbar = () => {
     </>
   );
   return (
-      <div className="navbar bg-accent">
+      <div className="navbar bg-accent  max-w-screen-2xl mx-auto px-12">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

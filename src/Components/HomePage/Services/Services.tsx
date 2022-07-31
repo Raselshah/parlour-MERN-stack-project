@@ -24,7 +24,7 @@ const Services = () => {
     navigate(`/booking/book/${id}`)
   }
   return (
-    <div className="bg-base-100 mx-auto pb-6">
+    <div className="max-w-screen-2xl bg-white mx-auto px-6 lg:px-12 pb-6">
       <h2 className="text-center text-4xl font-bold pt-12">
         Our Awesome <span className="text-primary">Services</span>{" "}
       </h2>

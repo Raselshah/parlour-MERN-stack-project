@@ -16,8 +16,8 @@ import SignUp from "./Components/SignUp/SignUp";
 
 function App() {
   return (
-    <div className="bg-accent App">
-      <div className="max-w-screen-2xl mx-auto px-12">
+    <div className="App">
+      <div className="">
         <Navbar />
         <Routes>
           <Route path='/' element={<HomePage/>} />

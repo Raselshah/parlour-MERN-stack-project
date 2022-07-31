@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonial = () => {
   return (
-    <div className="bg-base-100 py-12">
+    <div className="p-12">
       <h2 className="text-4xl text-center font-bold">Testimonials</h2>
 
       <div className="cards mt-12">

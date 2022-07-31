@@ -10,7 +10,7 @@ const ContactMe = () => {
       data-aos-duration="2000"
       className="w-2/4 mx-auto mt-12"
     >
-      <h2 className="text-4xl font-bold text-center mt-12">
+      <h2 className="text-3xl font-bold text-center mt-12">
         Let us handle your <br /> project, professionally.
       </h2>
 

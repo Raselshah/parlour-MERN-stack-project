@@ -14,7 +14,7 @@ const Treatment = () => {
           data-aos-duration="1500"
           className="div"
         >
-          <h2 className="text-5xl font-bold text-left">
+          <h2 className="text-3xl lg:text-4xl font-bold text-left">
             Let us handle your <br /> screen{" "}
             <span className="text-primary">Professionally</span>.
           </h2>

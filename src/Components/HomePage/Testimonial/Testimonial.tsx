@@ -6,7 +6,7 @@ const Testimonial = () => {
       <h2 className="text-4xl text-center font-bold">Testimonials</h2>
 
       <div className="cards mt-12">
-        <div className="card w-96 bg-base-100">
+        <div className="card w-76 bg-base-100">
           <div className="flex flex-row gap-x-3 items-center justify-start m-6">
             <div className="avatar">
               <div className="w-24 rounded-full">
@@ -19,7 +19,7 @@ const Testimonial = () => {
             </div>
           </div>
           <div className="mx-6">
-            <p>
+            <p className="text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
               commodo ipsum duis laoreet maecenas. Feugiat{" "}
             </p>

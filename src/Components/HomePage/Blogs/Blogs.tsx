@@ -32,7 +32,9 @@ const Blogs = () => {
               <div className="div">
                 <img
                  data-aos="fade-up"
-                 data-aos-anchor-placement="center-bottom"
+                 data-aos-anchor-placement="bottom-bottom"
+                 data-aos-easing="linear"
+              data-aos-duration="1500"
                   className="img-fluid"
                   src="https://spalabdev.wpengine.com/wp-content/uploads/2014/07/blog18.jpg"
                   alt=""
@@ -64,8 +66,10 @@ const Blogs = () => {
 
               <div className="div">
                 <img
-                 data-aos="fade-up"
+                 data-aos="fade-down"
                  data-aos-anchor-placement="bottom-bottom"
+                 data-aos-easing="linear"
+              data-aos-duration="1500"
                   className="img-fluid"
                   src="https://spalabdev.wpengine.com/wp-content/uploads/2014/07/blog.jpg"
                   alt=""

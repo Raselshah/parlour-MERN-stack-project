@@ -6,11 +6,13 @@ const Testimonial = () => {
       <h2 className="text-4xl text-center font-bold">Testimonials</h2>
 
       <div className="cards mt-12">
-        <div className="card w-76 bg-base-100">
+        <div
+        data-aos="zoom-in-left"
+         className="card w-72 bg-base-100">
           <div className="flex flex-row gap-x-3 items-center justify-start m-6">
             <div className="avatar">
               <div className="w-24 rounded-full">
-                <img src="https://placeimg.com/192/192/people" />
+                <img src="https://placeimg.com/192/192/people" alt="" />
               </div>
             </div>
             <div className="div">

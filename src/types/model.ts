@@ -22,3 +22,9 @@ export default interface DoctorsModel{
     userId:number,
     photo:any
 }
+
+export default interface UserReview{
+    name:string,
+    company:string | number,
+    description: string,
+}

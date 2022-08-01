@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CheckoutForm";
+import Loading from "../../Hooks/Loading/Loading";
 
 interface Product {
   _id: number,
@@ -31,7 +32,7 @@ const BookingDetails = () => {
   console.log(service);
 
   if (loading) {
-    return <p>loading....</p>;
+    return <Loading/>;
   }
 
   const user = {

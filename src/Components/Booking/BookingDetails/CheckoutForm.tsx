@@ -6,6 +6,7 @@ const CheckoutForm = ({service, user}:any) => {
   const elements = useElements();
 const [cardError, setCardError] = useState<string | undefined>("");
 const [success, setSuccess] = useState("");
+const [payment, setPayment] = useState("");
 
 const [clientSecret, setClientSecret] = useState("");
 
@@ -64,6 +65,7 @@ const {name,email} = user;
     }
     else{
       setCardError("");
+      setPayment(paymentIntent.id)
       setSuccess("Congratulation your payment complete")
     }
   };
@@ -91,7 +93,10 @@ const {name,email} = user;
         cardError && success ? <p className="text-red-400 text-center mt-2">{cardError}</p> : ""
       }
         {
-        success ? <p className="text-green-400 text-center mt-2">{success}</p> : ""
+        success ? <div className="div">
+          <p className="text-green-400 text-center mt-2">{success}</p>
+          <p className="text-green-400 text-center mt-2">TrxId : <span className="text-orange-500">{payment}</span> </p>
+        </div> : ""
       }
         <div className="flex justify-between items-center mt-6">
         

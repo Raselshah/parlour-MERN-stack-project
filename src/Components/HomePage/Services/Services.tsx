@@ -10,7 +10,7 @@ const Services = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const res = await axios.get("Data.json");
+      const res = await axios.get("http://localhost:5000/home");
       setProducts(res.data);
       setLoading(false);
     };
@@ -29,17 +29,18 @@ const Services = () => {
         Our Awesome <span className="text-primary">Services</span>{" "}
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto p-12 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto p-4 sm:p-12 mt-6">
         {products.slice(0,6).map((product) => (
           <>
             <div
+            key={product._id}
              data-aos="fade-up"
              data-aos-anchor-placement="center-center"
              data-aos-duration="2000"
              className="card bg-base-100 shadow-lg hover:drop-shadow-2xl hover:shadow-red-500/60 cursor-pointer"
              >
               <div
-              onClick={() => handleBooking(product.userId)}
+              onClick={() => handleBooking(product._id)}
                className="card-body text-center">
                 <img className="w-16 mx-auto" src={product.photo} alt="" />
                 <h2 className="">{product.name}</h2>

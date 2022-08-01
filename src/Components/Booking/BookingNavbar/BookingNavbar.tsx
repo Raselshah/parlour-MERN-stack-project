@@ -1,7 +1,9 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 
 const BookingNavbar = () => {
+  const {id} = useParams();
+  console.log(id);
   return (
     <div>
       <div className="drawer drawer-mobile">
@@ -13,7 +15,7 @@ const BookingNavbar = () => {
           <label htmlFor="my-drawer" className="drawer-overlay"></label>
           <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
             <li>
-              <Link to='book'>Book</Link>
+              <Link to={`book/${id}`} >Book</Link>
             </li>
             <li>
               <Link to='bookingList'>Booking list</Link>

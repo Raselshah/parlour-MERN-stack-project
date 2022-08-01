@@ -1,26 +1,74 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import CheckoutForm from "./CheckoutForm";
 
+interface Product {
+  _id: number,
+  name?: string,
+  description?: string,
+  photo?:any
+}
+const stripePromise = loadStripe(
+  "pk_test_51L0kNCFNu1QzxAujT7H5defX0vjCNRCrTR97rqiI3I6dcQJg4Z4e7ullhZVkJMSZe6WYNG6On3BDfGeGv5I9d83N004JEamegQ"
+);
 const BookingDetails = () => {
-    const {id} = useParams();
-    return (
-        <div
-        data-aos="flip-left"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
-     data-aos-offset="500"
-         className='max-w-xs flex flex-col justify-center gap-y-6'>
-            <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
-            <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
-            <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
-            <p>Pay with</p>
-            <p>Creadit Card</p>
-            <div className='flex justify-between items-center'>
-            <p>Your Service charged $1000</p>
-            <button className='btn btn-md px-8 btn-primary'>Pay</button>
-            </div>
-        </div>
-    );
+  const { id } = useParams();
+  const [service, setService] = useState<Product>({} as Product);
+  const [loading, setLoading] = useState<Boolean>(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      const res = await axios.get(`http://localhost:5000/myProduct/${id}`);
+      setService(res.data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
+
+  console.log(service);
+
+  if (loading) {
+    return <p>loading....</p>;
+  }
+
+  const user = {
+    name: "Jhon Dany",
+    email: "jhondany@mail.com",
+  };
+  return (
+    <div
+      data-aos="flip-left"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+      data-aos-offset="500"
+      className="max-w-xs flex flex-col justify-center gap-y-6"
+    >
+      <input
+        type="text"
+        value={user.name}
+        className="input input-bordered w-full max-w-xs"
+      />
+      <input
+        type="text"
+        value={user.email}
+        className="input input-bordered w-full max-w-xs"
+      />
+      <input
+        type="text"
+        value={service?.name}
+        className="input input-bordered w-full max-w-xs"
+      />
+      <p className="text-xs">Pay with</p>
+      <p className="text-xl font-bold">Creadit Card</p>
+
+      <Elements stripe={stripePromise}>
+        <CheckoutForm user={user} service={service} />
+      </Elements>
+    </div>
+  );
 };
 
 export default BookingDetails;

@@ -1,9 +1,10 @@
+
 export default interface Products{
     name: string,
     description: string,
     price:number,
     photo:any,
-    userId:number
+    _id:number,
 }
 
 export default interface GiftModel{

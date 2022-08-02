@@ -5,6 +5,9 @@ export default interface Products{
     price:number,
     photo:any,
     _id:number,
+    paid?:boolean,
+    productName?:string,
+    userName?:string,
 }
 
 export default interface GiftModel{

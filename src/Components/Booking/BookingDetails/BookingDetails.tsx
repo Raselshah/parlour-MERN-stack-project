@@ -8,7 +8,8 @@ import Loading from "../../Hooks/Loading/Loading";
 
 interface Product {
   _id: number,
-  name?: string,
+  productName?: string,
+  name?:string,
   description?: string,
   photo?:any
 }
@@ -16,13 +17,18 @@ const stripePromise = loadStripe(
   "pk_test_51L0kNCFNu1QzxAujT7H5defX0vjCNRCrTR97rqiI3I6dcQJg4Z4e7ullhZVkJMSZe6WYNG6On3BDfGeGv5I9d83N004JEamegQ"
 );
 const BookingDetails = () => {
-  const { id } = useParams();
+  const {id} = useParams();
   const [service, setService] = useState<Product>({} as Product);
   const [loading, setLoading] = useState<Boolean>(false);
+  const user = {
+    name: "Jhon Dany",
+    email: "jhondany@mail.com",
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const res = await axios.get(`http://localhost:5000/myProduct/${id}`);
+      const res = await axios.get(`http://localhost:5000/myOrder/${id}`);
       setService(res.data);
       setLoading(false);
     };
@@ -35,10 +41,6 @@ const BookingDetails = () => {
     return <Loading/>;
   }
 
-  const user = {
-    name: "Jhon Dany",
-    email: "jhondany@mail.com",
-  };
   return (
     <div
       data-aos="flip-left"
@@ -59,7 +61,7 @@ const BookingDetails = () => {
       />
       <input
         type="text"
-        value={service?.name}
+        value={service?.productName}
         className="input input-bordered w-full max-w-xs"
       />
       <p className="text-xs">Pay with</p>

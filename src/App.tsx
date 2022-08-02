@@ -24,12 +24,12 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/signUp" element={<SignUp/>} />
           <Route path="/booking" element={<BookingNavbar/>} >
+            <Route index element={<BookingList />} />
             <Route path="book/:id" element={<BookingDetails />} />
-            <Route path="bookingList" element={<BookingList />} />
             <Route path="review" element={<Review />} />
           </Route>
           <Route path="/admin" element={<AdminNavbar/>}>
-              <Route path="order" element={<OrderList/>} />
+              <Route index element={<OrderList/>} />
               <Route path="addService" element={<ServiceList/>} />
               <Route path="makeAdmin" element={<MakeAdmin/>} />
           </Route>

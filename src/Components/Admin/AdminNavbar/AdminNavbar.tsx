@@ -16,7 +16,7 @@ const AdminNavbar = () => {
           <label htmlFor="my-drawer-1" className="drawer-overlay"></label>
           <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
             <li>
-              <Link to='order'>Order list</Link>
+              <Link to='/order'>Order list</Link>
             </li>
             <li>
               <Link to='addService'>Add service</Link>

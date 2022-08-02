@@ -11,6 +11,7 @@ const ServiceModal = ({openModal , setOpenModal}:any) => {
             productName:productName,
             phone:e.target.phone.value,
             email:e.target.email.value,
+            userName:e.target.userName.value,
             photo:photo,
             description:description,
             price:price,
@@ -54,10 +55,17 @@ const ServiceModal = ({openModal , setOpenModal}:any) => {
               className="input input-bordered w-full max-w-xs"
             />
             <input
-            required
               name="email"
+              readOnly
+              value="jhondany@mail.com"
               type="text"
-              placeholder="email"
+              className="input input-bordered w-full max-w-xs"
+            />
+            <input
+              name="userName"
+              readOnly
+              value="jhon doe"
+              type="text"
               className="input input-bordered w-full max-w-xs"
             />
             <input

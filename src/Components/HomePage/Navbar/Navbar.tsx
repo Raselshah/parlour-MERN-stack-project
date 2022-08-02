@@ -15,15 +15,16 @@ const Navbar = () => {
       </li>
       <li>
         {" "}
-        <Link to="/team">Projects</Link>{" "}
+        <Link to="/booking">Booking</Link>{" "}
+      </li>
+      
+      <li>
+        {" "}
+        <Link to="/admin">Admin</Link>{" "}
       </li>
       <li>
         {" "}
         <Link to="/contact">Contact</Link>{" "}
-      </li>
-      <li>
-        {" "}
-        <Link to="/admin">Admin</Link>{" "}
       </li>
       <li>
         <Link to="/login">Login</Link>
@@ -31,7 +32,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="bg-accent ">
+    <div className="bg-accent sticky top-0">
       <div className="navbar max-w-screen-2xl mx-auto px-12">
         <div className="navbar-start">
           <div className="dropdown">

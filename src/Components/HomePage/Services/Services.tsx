@@ -13,7 +13,7 @@ const Services = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/home");
+      const res = await axios.get("https://agile-cove-82104.herokuapp.com/home");
       setProducts(res.data);
       setLoading(false);
     };

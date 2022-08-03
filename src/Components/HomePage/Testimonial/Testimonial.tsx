@@ -4,7 +4,7 @@ import UserReview from "../../../types/model"
 const Testimonial = () => {
   const [review, setReview] = useState<UserReview[]>([]);
 
-  axios.get('http://localhost:5000/review')
+  axios.get('https://agile-cove-82104.herokuapp.com/review')
   .then(res => setReview(res.data));
 
   return (

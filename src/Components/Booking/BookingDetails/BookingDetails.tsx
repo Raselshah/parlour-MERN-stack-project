@@ -28,7 +28,7 @@ const BookingDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const res = await axios.get(`http://localhost:5000/myOrder/${id}`);
+      const res = await axios.get(`https://agile-cove-82104.herokuapp.com/myOrder/${id}`);
       setService(res.data);
       setLoading(false);
     };

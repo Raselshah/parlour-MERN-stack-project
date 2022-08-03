@@ -10,7 +10,7 @@ const OrderList = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/booking");
+      const res = await axios.get("https://agile-cove-82104.herokuapp.com/booking");
       setOrders(res.data);
       setLoading(false);
     };
@@ -23,7 +23,7 @@ const OrderList = () => {
     const confirmDelete = window.confirm("your sure delete this order");
     console.log(confirmDelete);
     if(confirmDelete === true){
-      axios.delete(`http://localhost:5000/booking/${id}`)
+      axios.delete(`https://agile-cove-82104.herokuapp.com/booking/${id}`)
     .then(res => {
       if(res.data.acknowledged){
         alert("successfully delete order");

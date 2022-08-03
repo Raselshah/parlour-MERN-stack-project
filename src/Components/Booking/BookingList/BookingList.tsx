@@ -18,7 +18,7 @@ const BookingList = () => {
     const fetchData = async () => {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:5000/myProduct/${user.email}`
+        `https://agile-cove-82104.herokuapp.com/myProduct/${user.email}`
       );
       setOrder(res.data);
       setLoading(false);
@@ -38,10 +38,10 @@ const BookingList = () => {
               <img className="w-16" src={o.photo} alt="" />
               <div className="">
                 {
-                  (o.price && !o.paid) && <Link to={`/booking/book/${o._id}`}><button className="btn btn-xs bg-secondary text-red-500 border-0 hover:bg-primary hover:text-white">pending</button></Link>
+                  (o.price && !o.paid) && <Link to={`/booking/book/${o._id}`}><button className="btn btn-xs bg-red-100 text-red-500 border-0 hover:bg-primary hover:text-white">pending</button></Link>
                 }
                 {
-                  (o.price && o.paid) && <button className="btn btn-xs bg-neutral">Done</button>
+                  (o.price && o.paid) && <button className="btn btn-xs bg-LightCyan">Done</button>
                 }
               </div>
             </div>

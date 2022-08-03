@@ -7,7 +7,7 @@ const ServiceModal = ({openModal , setOpenModal}:any) => {
         e.preventDefault();
 
         const productName = name;
-        axios.post("http://localhost:5000/booking",{
+        axios.post("https://agile-cove-82104.herokuapp.com/booking",{
             productName:productName,
             phone:e.target.phone.value,
             email:e.target.email.value,

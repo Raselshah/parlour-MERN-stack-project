@@ -16,7 +16,7 @@ const CheckoutForm = ({ service, user }: any) => {
   const { name, email } = user;
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://agile-cove-82104.herokuapp.com/create-payment-intent", {
       method: "POST",
       headers: { "content-Type": "application/json" },
       body: JSON.stringify({ price }),
@@ -76,7 +76,7 @@ const CheckoutForm = ({ service, user }: any) => {
         booking: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`http://localhost:5000/booking/${_id}`, {
+      fetch(`https://agile-cove-82104.herokuapp.com/booking/${_id}`, {
         method: "PATCH",
         headers: { "content-Type": "application/json" },
         body: JSON.stringify(payment),

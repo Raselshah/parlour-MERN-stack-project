@@ -9,7 +9,7 @@ const Review = () => {
         const company = e.target.company.value;
         const description = e.target.description.value;
 
-        axios.post('http://localhost:5000/review', {
+        axios.post('https://agile-cove-82104.herokuapp.com/review', {
             name: name,
             company:company,
             description:description
